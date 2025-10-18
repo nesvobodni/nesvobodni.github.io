@@ -33,7 +33,20 @@
       type="module"
       src="https://unpkg.com/@microsoft/fast-components"
     ></script>
-
+<style>
+  body {
+    margin: 0;
+    background-color: black;
+    color: yellow;
+    font-family: monospace;
+    padding: 20px;
+  }
+  .content {
+    max-width: 600px; /* fixed max width */
+    margin: auto;
+    word-wrap: break-word;
+  }
+</style>
     <!-- A stylesheet to design the pages. -->
     <link href="styles/global.css" rel="stylesheet" />
 
@@ -46,10 +59,13 @@
     <fast-design-system-provider use-defaults>
       <app-index></app-index>
     </fast-design-system-provider>
+
+      <div class="content">
     <a href="https://nesvobodni.cz"> web </a>
     <a href="https://instagr.am/nesvobodni"> ig </a>
     <a href="https://twitter.com/nesvobodni_cz"> tw </a>
     <a href="https://fb.com/nesvobodni"> fb </a>
+        </div>
     <script type="module" src="/pwabuilder-sw.ts"></script>
 
     <script>
