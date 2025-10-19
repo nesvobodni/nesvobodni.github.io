@@ -34,18 +34,54 @@
       src="https://unpkg.com/@microsoft/fast-components"
     ></script>
 <style>
-  body {
-    margin: 0;
-    background-color: black;
-    color: yellow;
-    font-family: monospace;
-    padding: 20px;
-  }
+/*
+  This file is used for all of your global styles and CSS variables.
+  Check here https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties for more info on using CSS variables.
+:root {
+  --font-family: sans-serif;
+}
+*/
+:root {
+  --font-family: monospace;
+}
+html, body {
+  font-family: var(--font-family);
+  padding: 20px;
+  margin: 0;
+  background: #181818;
+  color: yellow;
+  background-color: black;
+}
+
   .content {
     max-width: 600px; /* fixed max width */
     margin: auto;
     word-wrap: break-word;
   }
+
+fast-design-system-provider {
+  color: black;
+}
+
+@media (prefers-color-scheme: light) {
+  html,
+  body {
+    background: #edebe9;
+    color: black;
+  }
+
+  fast-design-system-provider {
+    color: black;
+    --background-color: #edebe9;
+    --neutral-foreground-rest: #e5e5e5;
+    --neutral-fill-input-rest: #e5e5e5;
+    --neutral-fill-input-hover: white;
+    --neutral-fill-stealth-rest: #e5e5e5;
+    --neutral-fill-rest: #5d5d5d;
+    --neutral-fill-input-active: #e5e5e5;
+  }
+}
+
 </style>
     <!-- A stylesheet to design the pages. 
     <link href="styles/global.css" rel="stylesheet" />
@@ -61,6 +97,7 @@
       <app-index></app-index>
     </fast-design-system-provider>
 
+    <h1>Nesvobodni</h1>
       <div class="content">Test record<br>
     <a href="https://nesvobodni.cz"> web </a>
     <a href="https://instagr.am/nesvobodni"> ig </a>
