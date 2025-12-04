@@ -1,0 +1,8 @@
+{
+  "names": {
+    "nostr": "d774a001a7d92e89e570ab77fbe2e507170ece585432cb2b1fde498e41a5f036"
+  },
+  "relays": {
+    "d774a001a7d92e89e570ab77fbe2e507170ece585432cb2b1fde498e41a5f036": [ "wss://relay.example.com", "wss://relay2.example.com" ]
+  }
+}
