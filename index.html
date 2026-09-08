@@ -214,7 +214,286 @@ fast-design-system-provider {
   .ns-hashtag-links a:hover, .ns-hashtag-links a:focus-visible { color: #fff; background: #222; outline: 2px solid transparent; }
   @media (max-width: 600px) { .ns-site { width: 100%; } .ns-hashtag-row { align-items: flex-start; flex-direction: column; gap: .55rem; } .ns-hashtag-name { flex-basis: auto; } }
 </style>
-      
+
+
+<footer class="ns-share-footer" aria-labelledby="ns-share-title">
+  <section class="ns-share-footer__inner">
+    <h2 id="ns-share-title">Sdílet tuto stránku</h2>
+    <p class="ns-share-footer__intro">Pomozte šířit informace: vyberte platformu, na které chcete aktuální stránku sdílet.</p>
+
+    <div class="ns-share-buttons" role="list" aria-label="Možnosti sdílení">
+      <button class="ns-share-button" type="button" data-share="native" aria-label="Sdílet prostřednictvím systému" title="Sdílet…">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1c-.8 0-1.5.3-2 .8L8.7 12.7c.1-.2.1-.5.1-.7s0-.5-.1-.7L16 7.1c.5.5 1.2.8 2 .8a3 3 0 1 0-3-3c0 .2 0 .5.1.7L7.8 9.8A3 3 0 1 0 7.8 14l7.3 4.2c-.1.2-.1.4-.1.7a3 3 0 1 0 3-2.8z"/></svg>
+        <span>Sdílet…</span>
+      </button>
+
+      <a class="ns-share-button" href="#" data-share="x" aria-label="Sdílet na X" title="Sdílet na X">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.2-8.3L2.8 2h6.4l4.4 5.8L18.9 2zm-1.1 18h1.7L8.3 3.9H6.5L17.8 20z"/></svg>
+        <span>X</span>
+      </a>
+
+      <a class="ns-share-button" href="#" data-share="facebook" aria-label="Sdílet na Facebooku" title="Sdílet na Facebooku">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.6 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2H7.7v3h2.7v8h3.2z"/></svg>
+        <span>Facebook</span>
+      </a>
+
+      <a class="ns-share-button" href="#" data-share="telegram" aria-label="Sdílet na Telegramu" title="Sdílet na Telegramu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 4.2 18.5 19c-.2 1.1-.8 1.4-1.6.9l-4.4-3.2-2.1 2c-.2.2-.4.4-.8.4l.3-4.4 8-7.2c.3-.3-.1-.5-.5-.2l-9.9 6.2-4.3-1.3c-.9-.3-.9-.9.2-1.3L20.2 4c.8-.3 1.6.2 1.4.2z"/></svg>
+        <span>Telegram</span>
+      </a>
+
+      <a class="ns-share-button" href="#" data-share="reddit" aria-label="Sdílet na Redditu" title="Sdílet na Redditu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.4 3.4 13.2 9c1.8.1 3.4.7 4.6 1.7.5-.4 1.1-.6 1.8-.6 1.5 0 2.7 1.2 2.7 2.7 0 1-.5 1.8-1.3 2.3.1.4.1.8.1 1.2 0 3.3-4 6-9 6s-9-2.7-9-6c0-.4 0-.8.1-1.2A2.7 2.7 0 0 1 4.4 10c.7 0 1.3.2 1.8.6 1.3-1 3-1.6 4.8-1.7l1.4-6.6 4.7 1.1-.4 1.7-2.3-.5z"/></svg>
+        <span>Reddit</span>
+      </a>
+
+      <a class="ns-share-button" href="#" data-share="tumblr" aria-label="Sdílet na Tumblru" title="Sdílet na Tumblru">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.6 19.6c-2.8 0-4.3-1.4-4.3-4.4v-5H8V7.4c2.4-.9 3.1-3 3.2-4.2h2.5v4h3.1v3h-3.1v4.4c0 1.3.5 1.8 1.7 1.8h1.5v3.2h-2.3z"/></svg>
+        <span>Tumblr</span>
+      </a>
+
+      <a class="ns-share-button" href="#" data-share="whatsapp" aria-label="Sdílet přes WhatsApp" title="Sdílet přes WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.5 5.8L.2 24l6.6-1.7a11.8 11.8 0 0 0 5.3 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.3zM12.1 21.6h-.1a9.7 9.7 0 0 1-4.9-1.3l-.4-.2-3.9 1 1-3.8-.3-.4a9.7 9.7 0 0 1-1.5-5.1c0-5.4 4.4-9.8 9.8-9.8 2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.8-9.8 9.8zm5.4-7.3c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.8-.9-3-1.6-4.2-3.7-.3-.5.3-.5.9-1.7.1-.2.1-.4 0-.6-.1-.1-.7-1.6-.9-2.2-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 3 0 1.8 1.2 3.5 1.4 3.8.2.2 2.4 3.8 5.9 5.2 2.2.9 3.1.9 4.2.8.7-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+
+      <!-- Platformy bez přímého standardního webového share dialogu. -->
+      <button class="ns-share-button" type="button" data-copy-share="instagram" data-profile="https://instagram.com/nesvobodni" aria-label="Zkopírovat odkaz a otevřít Instagram" title="Zkopírovat odkaz a otevřít Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.7 2h8.6A5.7 5.7 0 0 1 22 7.7v8.6a5.7 5.7 0 0 1-5.7 5.7H7.7A5.7 5.7 0 0 1 2 16.3V7.7A5.7 5.7 0 0 1 7.7 2zm0 2A3.7 3.7 0 0 0 4 7.7v8.6A3.7 3.7 0 0 0 7.7 20h8.6a3.7 3.7 0 0 0 3.7-3.7V7.7A3.7 3.7 0 0 0 16.3 4H7.7zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.2-3.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
+        <span>Instagram</span>
+      </button>
+
+      <button class="ns-share-button" type="button" data-copy-share="threads" data-profile="https://www.threads.com/@nesvobodni" aria-label="Zkopírovat odkaz a otevřít Threads" title="Zkopírovat odkaz a otevřít Threads">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.8 13.5c-.3 2-1.8 3.5-4.5 3.5-2.9 0-4.8-1.7-4.8-4.2 0-2.1 1.6-3.7 4.3-3.7 1.1 0 2 .2 2.8.6-.2-1.6-.9-2.6-2.5-2.6-1.1 0-1.9.5-2.2 1.4L8.2 9c.6-1.7 2.1-2.7 4-2.7 3.2 0 4.7 2.2 4.7 5.4v.6c.8.5 1.3 1.3 1.3 2.2 0 .9-.5 1.6-1.4 1.8zm-2.2-1.6c-.8-.5-1.7-.8-2.8-.8-1.4 0-2.2.7-2.2 1.7 0 1.2 1 2.1 2.6 2.1 1.4 0 2.3-.8 2.4-2.3z"/></svg>
+        <span>Threads</span>
+      </button>
+
+      <button class="ns-share-button" type="button" data-copy-share="bluesky" data-profile="https://bsky.app/profile/nesvobodni.bsky.social" aria-label="Zkopírovat odkaz a otevřít Bluesky" title="Zkopírovat odkaz a otevřít Bluesky">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 10.7C10.2 7.4 7.1 4.5 4.6 3.2 2.2 2 .8 2.3 1.4 5.8c.4 2.4 1.7 5.1 4.3 6.6-2 .3-3.8 1.5-3.2 4.1.5 2.1 2.7 3.9 6 3.5 1.5-.2 2.6-1 3.5-2.2.9 1.2 2 2 3.5 2.2 3.3.4 5.5-1.4 6-3.5.6-2.6-1.2-3.8-3.2-4.1 2.6-1.5 3.9-4.2 4.3-6.6.6-3.5-.8-3.8-3.2-2.6-2.5 1.3-5.6 4.2-7.4 7.5z"/></svg>
+        <span>Bluesky</span>
+      </button>
+
+      <button class="ns-share-button" type="button" data-copy-share="tiktok" data-profile="https://www.tiktok.com/@nesvobodni" aria-label="Zkopírovat odkaz a otevřít TikTok" title="Zkopírovat odkaz a otevřít TikTok">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3c.2 1.8 1.2 3.1 3 3.3v3.1c-1.1 0-2.1-.3-3-.9v6.1c0 4.8-5.2 6.3-7.8 3.7-2.6-2.6-1-7 2.7-7v3.1c-1.2-.4-2.3.5-2.3 1.7 0 1.1.9 2 2 2 1.2 0 2.3-.7 2.3-2.4V3H15z"/></svg>
+        <span>TikTok</span>
+      </button>
+
+      <button class="ns-share-button" type="button" data-copy-share="youtube" data-profile="https://www.youtube.com/@nesvobodni" aria-label="Zkopírovat odkaz a otevřít YouTube" title="Zkopírovat odkaz a otevřít YouTube">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.4-.4-5c-.2-.9-.9-1.6-1.8-1.8C19.2 4.8 12 4.8 12 4.8s-7.2 0-8.8.4C2.3 5.4 1.6 6.1 1.4 7 1 8.6 1 12 1 12s0 3.4.4 5c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-5 .4-5zM9.7 15.6V8.4l6 3.6-6 3.6z"/></svg>
+        <span>YouTube</span>
+      </button>
+
+      <button class="ns-share-button" type="button" data-copy-share="blogger" data-profile="https://nesvobodni.blogspot.com/" aria-label="Zkopírovat odkaz a otevřít Blogger" title="Zkopírovat odkaz a otevřít Blogger">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 4h7.2c2.7 0 4.8 2.1 4.8 4.8v.7c1.2.2 2.1 1.2 2.1 2.5v2.2c0 3.2-2.6 5.8-5.8 5.8H9.2c-3.2 0-5.7-2.6-5.7-5.8V8.8C3.5 6.1 4.5 4 6.5 4zm2 7.2c-.8 0-1.4.6-1.4 1.4S7.7 14 8.5 14s1.4-.6 1.4-1.4-.6-1.4-1.4-1.4zm5.1 0c-.8 0-1.4.6-1.4 1.4s.6 1.4 1.4 1.4 1.4-.6 1.4-1.4-.6-1.4-1.4-1.4z"/></svg>
+        <span>Blogger</span>
+      </button>
+
+      <button class="ns-share-button" type="button" data-copy-share="mewe" data-profile="https://mewe.com/i/nesvobodni" aria-label="Zkopírovat odkaz a otevřít MeWe" title="Zkopírovat odkaz a otevřít MeWe">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5 7.2 18h2.3l2.5-6.1 2.5 6.1h2.3L21 7.5h-3l-2.2 6.1-2.4-6.1h-2.8l-2.4 6.1L6 7.5H3z"/></svg>
+        <span>MeWe</span>
+      </button>
+
+      <button class="ns-share-button" type="button" data-copy-share="substack" data-profile="https://nesvobodni.substack.com/" aria-label="Zkopírovat odkaz a otevřít Substack" title="Zkopírovat odkaz a otevřít Substack">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h18v2H3V3zm0 4h18v2H3V7zm1 4h16v10H4V11zm2 2v6h12v-6H6z"/></svg>
+        <span>Substack</span>
+      </button>
+
+      <button class="ns-share-button" type="button" data-copy-share="linktree" data-profile="https://linktr.ee/nesvobodni" aria-label="Zkopírovat odkaz a otevřít Linktree" title="Zkopírovat odkaz a otevřít Linktree">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 8.4 5.6l2.1 2.1v2H6.7L3.1 6.1 1 8.2l3.6 3.6H10v3.7H6.3L4 13.2l-2.1 2.1L5.5 19H10v3h4v-3h4.5l3.6-3.7-2.1-2.1-2.3 2.3H14v-3.7h5.4L23 8.2l-2.1-2.1-3.6 3.6h-3.8v-2l2.1-2.1L12 2z"/></svg>
+        <span>Linktree</span>
+      </button>
+
+      <button class="ns-share-button" type="button" data-copy-share="gab" data-profile="https://gab.com/nesvobodni" aria-label="Zkopírovat odkaz a otevřít Gab" title="Zkopírovat odkaz a otevřít Gab">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20c2.3 0 4.4-.8 6-2.2v-7.3h-6v3h2.8v2.6A7 7 0 1 1 19 12h3A10 10 0 0 0 12 2z"/></svg>
+        <span>Gab</span>
+      </button>
+
+      <button class="ns-share-button" type="button" data-copy-share="parler" data-profile="https://parler.com/user/nesvobodni" aria-label="Zkopírovat odkaz a otevřít Parler" title="Zkopírovat odkaz a otevřít Parler">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h8.4A6.6 6.6 0 0 1 19 9.6c0 3.6-2.8 6.5-6.4 6.6L8 21v-4.8H4V3zm3 3v7.2h5.4A3.6 3.6 0 0 0 16 9.6 3.6 3.6 0 0 0 12.4 6H7z"/></svg>
+        <span>Parler</span>
+      </button>
+
+      <button class="ns-share-button" type="button" data-copy-share="gettr" data-profile="https://gettr.com/user/nesvobodni" aria-label="Zkopírovat odkaz a otevřít GETTR" title="Zkopírovat odkaz a otevřít GETTR">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10h-9v3h5.6A7 7 0 1 1 12 5c1.7 0 3.2.6 4.4 1.6l2.1-2.1A10 10 0 0 0 12 2z"/></svg>
+        <span>GETTR</span>
+      </button>
+
+      <a class="ns-share-button" href="#" data-share="email" aria-label="Sdílet e-mailem" title="Sdílet e-mailem">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <span>E-mail</span>
+      </a>
+    </div>
+
+    <p class="ns-share-status" id="ns-share-status" role="status" aria-live="polite"></p>
+  </section>
+</footer>
+
+<style>
+  .ns-share-footer {
+    margin-top: 2.5rem;
+    padding: 1.5rem 1rem;
+    color: inherit;
+    border-top: 1px solid #999;
+  }
+
+  .ns-share-footer__inner {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .ns-share-footer h2 {
+    margin: 0 0 .6rem;
+    font-size: 1.35rem;
+  }
+
+  .ns-share-footer__intro {
+    margin: 0 0 1rem;
+    line-height: 1.5;
+  }
+
+  .ns-share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+  }
+
+  .ns-share-button {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    min-height: 2.35rem;
+    padding: .48rem .7rem;
+    color: inherit;
+    font: inherit;
+    font-size: .92rem;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: .2rem;
+  }
+
+  .ns-share-button svg {
+    flex: 0 0 auto;
+    width: 1.05rem;
+    height: 1.05rem;
+    fill: currentColor;
+  }
+
+  .ns-share-button:hover,
+  .ns-share-button:focus-visible {
+    color: #fff;
+    background: #222;
+    outline: 2px solid transparent;
+  }
+
+  .ns-share-status {
+    min-height: 1.3em;
+    margin: .8rem 0 0;
+    font-size: .9rem;
+  }
+
+  @media (max-width: 560px) {
+    .ns-share-button {
+      flex: 1 0 calc(50% - .45rem);
+      justify-content: center;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var status = document.getElementById('ns-share-status');
+    var url = window.location.href;
+    var title = document.title || 'Nesvobodní';
+    var text = title + '\n' + url;
+    var encodedUrl = encodeURIComponent(url);
+    var encodedTitle = encodeURIComponent(title);
+    var encodedText = encodeURIComponent(title + ' ' + url);
+
+    var shareUrls = {
+      x: 'https://x.com/intent/post?text=' + encodedText,
+      facebook: 'https://www.facebook.com/sharer/sharer.php?u=' + encodedUrl,
+      telegram: 'https://t.me/share/url?url=' + encodedUrl + '&text=' + encodedTitle,
+      reddit: 'https://www.reddit.com/submit?url=' + encodedUrl + '&title=' + encodedTitle,
+      tumblr: 'https://www.tumblr.com/widgets/share/tool?posttype=link&canonicalUrl=' + encodedUrl + '&title=' + encodedTitle + '&content=' + encodedUrl,
+      whatsapp: 'https://api.whatsapp.com/send?text=' + encodedText,
+      email: 'mailto:?subject=' + encodedTitle + '&body=' + encodeURIComponent(text)
+    };
+
+    function setStatus(message) {
+      status.textContent = message;
+    }
+
+    function popup(href) {
+      window.open(href, 'nsShare', 'noopener,noreferrer,width=680,height=560,menubar=no,toolbar=no,status=no');
+    }
+
+    function fallbackCopy(value) {
+      var field = document.createElement('textarea');
+      field.value = value;
+      field.setAttribute('readonly', '');
+      field.style.position = 'fixed';
+      field.style.opacity = '0';
+      document.body.appendChild(field);
+      field.select();
+      document.execCommand('copy');
+      document.body.removeChild(field);
+    }
+
+    function copyShareText() {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        return navigator.clipboard.writeText(text);
+      }
+      fallbackCopy(text);
+      return Promise.resolve();
+    }
+
+    document.querySelectorAll('[data-share]').forEach(function (element) {
+      element.addEventListener('click', function (event) {
+        var platform = element.getAttribute('data-share');
+
+        if (platform === 'native') {
+          event.preventDefault();
+          if (navigator.share) {
+            navigator.share({ title: title, text: title, url: url }).catch(function () {});
+          } else {
+            copyShareText().then(function () {
+              setStatus('Odkaz na aktuální stránku byl zkopírován do schránky.');
+            });
+          }
+          return;
+        }
+
+        if (platform === 'email') {
+          element.href = shareUrls.email;
+          return;
+        }
+
+        event.preventDefault();
+        popup(shareUrls[platform]);
+      });
+    });
+
+    document.querySelectorAll('[data-copy-share]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var platform = button.getAttribute('data-copy-share');
+        var profile = button.getAttribute('data-profile');
+
+        copyShareText().then(function () {
+          setStatus('Text a odkaz byly zkopírovány. Vložete je do nového příspěvku na platformě ' + platform + '.');
+          window.open(profile, '_blank', 'noopener,noreferrer');
+        }).catch(function () {
+          setStatus('Odkaz se nepodařilo zkopírovat. Zkopírujte jej prosím ručně z adresního řádku.');
+          window.open(profile, '_blank', 'noopener,noreferrer');
+        });
+      });
+    });
+  }());
+</script>
+    
     <script type="module" src="/pwabuilder-sw.ts"></script>
 
     <script>
