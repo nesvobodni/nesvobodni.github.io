@@ -111,7 +111,7 @@ fast-design-system-provider {
     
 
 <section class="ns-social" aria-labelledby="ns-sites-title">
-  <h2 id="ns-sites-title">Sociální sítě:</h2>
+  <h2 id="ns-sites-title">Sociální sítě</h2>
   <p class="ns-note">Nemusíte s námi souhlasit - ale snad se nad našimi podněty alespoň zamyslíte. A prosíme o sdílení, než nás smažou 😜 😂</p>
 
   <nav class="ns-sites" aria-label="Profiles Nesvobodní">
@@ -137,8 +137,8 @@ fast-design-system-provider {
 </section>
 
 <section class="ns-social ns-hashtags-section" aria-labelledby="ns-hashtags-title">
-  <h2 id="ns-hashtags-title">Hashtags</h2>
-  <p class="ns-note">Kliknutím na ikonu otevřeš odpovídající hashtag na vybrané platformě.</p>
+  <h2 id="ns-hashtags-title">Hashtagy/Štítky</h2>
+  <p class="ns-note">Kliknutím na ikonu otevřete odpovídající Hashtag/Štítek na vybrané platformě.</p>
 
   <div class="ns-hashtag-list">
     <!-- Opakovatelný formát řádku; každý řádek obsahuje hashtag a platformy. -->
@@ -483,7 +483,7 @@ fast-design-system-provider {
         var profile = button.getAttribute('data-profile');
 
         copyShareText().then(function () {
-          setStatus('Text a odkaz byly zkopírovány. Vložete je do nového příspěvku na platformě ' + platform + '.');
+          setStatus('Text a odkaz byly zkopírovány. Vložte je do nového příspěvku na platformě ' + platform + '.');
           window.open(profile, '_blank', 'noopener,noreferrer');
         }).catch(function () {
           setStatus('Odkaz se nepodařilo zkopírovat. Zkopírujte jej prosím ručně z adresního řádku.');
